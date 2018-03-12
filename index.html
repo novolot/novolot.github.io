@@ -1,28 +1,82 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico">
-    <style>
-        #parent {position: relative;}
-		#child {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 50%;
-			height: 30%;
-			margin: auto;
-		}
-    </style>
-    <title>NOVOLOT</title>
-  </head>
-  <body>
-    <div id="parent">
-    	<div id="child"><img src="logo.png" /></div>
-    </div>
+<meta charset="utf-8">
+<title>NOVOLOT</title>
 
-  </body>
-</html>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="shortcut icon" href="favicon.ico">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+<style>
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    min-height: 350px;
+    position: relative;
+}
+
+body .logo{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -150px;
+    width: 299px;
+    height: 103px;
+    background: url(../img/logo.png) no-repeat 0 0;
+}
+
+div.content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+}
+
+div.content img{
+    max-width:100%;
+    max-height:100%;
+    margin:auto;
+    display:block;
+    position: relative;
+    -ms-interpolation-mode: bicubic; 
+}
+
+p{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    bottom: 20px;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    line-height: 90%;
+    display: inline-block;
+    padding-top: 10px;
+}
+</style>
+  
+<div class="logo"></div>
+
+<div class="content">
+    <img src="logo.png" alt="NOVOLOT" id="logo" />
+</div>
+<!--
+<p>
+    <a href="#" target="_blank">Address line</a><br />
+    <a href="tel:+00000000">Phone Line</a>
+</p>-->
